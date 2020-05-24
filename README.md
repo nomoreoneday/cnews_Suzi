@@ -15,6 +15,7 @@ There are 10 categories, which including: 'Sports', 'Finance', 'Real Estate', 'H
 
 * Model detail:
 
+```python
 class TextRNN(nn.Module):   
     def __init__(self):
         super(TextRNN, self).__init__()
@@ -30,6 +31,7 @@ class TextRNN(nn.Module):
         #x = F.dropout(x,p=0.8)
         x = self.fc(x[:,-1,:])
         return x
+```
 
 ### Model Accuracy:
 
