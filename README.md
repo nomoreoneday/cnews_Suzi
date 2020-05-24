@@ -28,7 +28,7 @@ class TextRNN(nn.Module):
     def forward(self, x):
         x = self.embedding(x)
         x,_ = self.rnn(x)
-        #x = F.dropout(x,p=0.8)
+        x = F.dropout(x,p=0.8)
         x = self.fc(x[:,-1,:])
         return x
 ```
